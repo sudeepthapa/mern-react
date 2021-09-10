@@ -1,8 +1,11 @@
+import { Link, NavLink } from 'react-router-dom';
 import './header.css';
 
 const Header = ({title, count}) => {
     return <div id="header">
-        <h1> {title} {count} </h1>
+        <h1> {title} </h1>
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/services'>Services</NavLink>
     </div>
 }
 
