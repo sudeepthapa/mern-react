@@ -46,13 +46,12 @@ class SignIn extends Component {
             this.setState({
                 errors: error
             })
-            return
+        } else {
+            console.log("FORM SUBMITTED SUCCESSFULLY", this.state)
+            this.setState({
+                errors: {}
+            })
         }
-
-        console.log("FORM SUBMITTED SUCCESSFULLY", this.state)
-        this.setState({
-            errors: {}
-        })
     }
 
     render() {
