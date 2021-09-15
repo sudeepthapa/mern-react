@@ -3,6 +3,19 @@ import './styles.css';
 
 class SignIn extends Component {
 
+    componentDidMount = () => {
+        console.log("COMPONENT DID MOUNT")
+    }
+
+    componentWillUnmount = () => {
+        console.log("componentWillUnMount")
+    }
+
+    shouldComponentUpdate = (nextProp, nextState) => {
+        console.log('this.shouldComponentUpdate')
+        return true;
+    }
+
     state = {
         username: '',
         password: '',
@@ -55,6 +68,7 @@ class SignIn extends Component {
     }
 
     render() {
+        console.log('render')
         return (
             <div className="wrapper">
                 <div className="form-container">
