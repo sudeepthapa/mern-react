@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
 import { CATEGORIES } from '../../constants/categories';
 
-const TodoForm = ({cancel, addTodos}) => {
+const TodoForm = ({cancel, addTodos, todo}) => {
 
     const [title, setTitle] = React.useState('');
     const [description, setDescription] = React.useState('');
