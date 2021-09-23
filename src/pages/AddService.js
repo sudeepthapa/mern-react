@@ -1,4 +1,7 @@
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import { addService, deleteService } from '../store/slices/serviceSlice'
+
 import './styles/addService.css'
 export default function AddService() {
 
@@ -6,20 +9,20 @@ export default function AddService() {
     const [description, setDescription] = React.useState('')
     const [company, setCompany] = React.useState('')
 
-    const [services, setServices] = React.useState([]);
+    const { services } = useSelector( state => state.service);
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const service = {title, description, company, id: new Date().toString()}
-        setServices([service, ...services])
+        dispatch(addService(service))
         setTitle('')
         setDescription('')
         setCompany('')
     }
 
     const handleDelete = (id) => {
-        const updatedServices = services.filter(service=>service.id !== id)
-        setServices(updatedServices)
+        dispatch(deleteService(id))
     }
 
     return (
