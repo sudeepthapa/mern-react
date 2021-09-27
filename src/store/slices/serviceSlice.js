@@ -59,6 +59,29 @@ export default serviceSlice.reducer;
 // GIT BASICS
 
 // initialize git in project - git init
+// link local repository to remote - git remote add origin <url>
+
 
 // staging - git add <filename> / .
 // commit - git commit -m 'message'
+// pushing to remote - git push origin <branchname>
+// retriving from remote - git pull origin <branchname>
+
+// mergeing - git merge branch_name
+// branching - git checkout -b branch_name
+
+
+// develop - feature/bugs
+// qc - qc.test.com - bugfix
+// master/main test.com - hotfix
+
+// features
+
+// switch to develop and pull the develop
+// git checkout -b refator-header
+
+// git checkout develop -> git pull origin develop 
+
+
+
+
